@@ -1,7 +1,6 @@
 import express from "express"
 import path from "path"
 
-const app: Express = express()
 import index from "./routes/index"
 
 const app: express.Express = express()
@@ -11,9 +10,7 @@ const port = process.env.PORT || 3000
 app.set("views", path.join(__dirname, "views"))
 app.set("view engine", "pug")
 
-app.get("/", (_: Request, res: Response) => {
-  res.send("Express + TypeScript Server")
-})
+app.use("/", index)
 
 app.listen(port, () => {
   console.log(`⚡️[server]: Server is running at https://localhost:${port}`)
