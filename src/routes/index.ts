@@ -1,9 +1,11 @@
+import express from "express"
 interface IMessages {
   text: string
   user: string
   added: Date
 }
 
+const router = express.Router()
 
 const messages: IMessages[] = [
   {
@@ -18,3 +20,9 @@ const messages: IMessages[] = [
   },
 ]
 
+// (req, res, next)
+router.get("/", (_, res, __) => {
+  res.render("index", { title: "Mini Messageboard", messages: messages })
+})
+
+export default router
