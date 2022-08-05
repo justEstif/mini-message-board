@@ -22,7 +22,7 @@ const messages: IMessages[] = [
 
 // (req, res, next)
 router.get("/", (_, res, __) => {
-  res.render("index", { title: "Mini Messageboard", messages: messages })
+  res.render("index", { title: "Mini Message Board", messages: messages })
 })
 
 export default router
