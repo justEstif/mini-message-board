@@ -2,6 +2,9 @@ import express from "express"
 import path from "path"
 
 const app: Express = express()
+import index from "./routes/index"
+
+const app: express.Express = express()
 const port = process.env.PORT || 3000
 
 // view engine setup
