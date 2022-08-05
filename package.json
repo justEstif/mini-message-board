@@ -2,6 +2,7 @@
   "name": "project-mini-message-board",
   "version": "1.0.0",
   "description": "a super simple message board",
+  "engines": {"node": "16.16.0"},
   "main": "index.js",
   "scripts": {
     "build": "npx tsc",
