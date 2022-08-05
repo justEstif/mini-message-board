@@ -5,8 +5,8 @@ block content
   form(role='form' method="POST" action="/new")
     div
       label(for='author') Author:
-      input(type="text" name="author" placeholder="author...")
+      input(type="text" required name="author" placeholder="author...")
     div
       label(for='message') Message:
-      input(type="text" name="message" placeholder="message...")
+      input(type="text" required name="message" placeholder="message...")
     input(type="submit")

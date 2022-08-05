@@ -1,22 +1,22 @@
 import express from "express"
-interface IMessages {
-  text: string
+interface IMessage {
+  message: string
   user: string
-  added: Date
+  sent: Date
 }
 
 const router = express.Router()
 
-const messages: IMessages[] = [
+const messages: IMessage[] = [
   {
-    text: "Hi there!",
+    message: "Hi there!",
     user: "Amando",
-    added: new Date(),
+    sent: new Date(),
   },
   {
-    text: "Hello World!",
+    message: "Hello World!",
     user: "Charles",
-    added: new Date(),
+    sent: new Date(),
   },
 ]
 
@@ -25,4 +25,5 @@ router.get("/", (_, res, __) => {
   res.render("index", { title: "Mini Message Board", messages: messages })
 })
 
+export { messages }
 export default router
