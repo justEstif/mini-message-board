@@ -1,0 +1,8 @@
+block content
+  h1= title
+  p Welcome to #{title}
+  ul
+    each message in messages
+      ul
+        each val, key in message
+          li= key + ": " + val
