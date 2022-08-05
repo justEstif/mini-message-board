@@ -1,0 +1,12 @@
+extends layout.pug
+
+block content
+  h1 Send Message
+  form(role='form' method="POST" action="/new")
+    div
+      label(for='author') Author:
+      input(type="text" name="author" placeholder="author...")
+    div
+      label(for='message') Message:
+      input(type="text" name="message" placeholder="message...")
+    input(type="submit")
