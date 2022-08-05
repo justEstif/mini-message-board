@@ -5,6 +5,8 @@ block content
   p Welcome to #{title}
   ul
     each message in messages
-      ul
-        each val, key in message
-          li= key + ": " + val
+      p User: #{message.user}
+        div
+          blockquote Message: #{message.message}
+          blockquote Sent: #{message.sent}
+  a(href="/new")="New Message"
