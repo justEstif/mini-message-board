@@ -38,3 +38,9 @@
         include pet.pug
     ```
 ---
+
+---
+- I need to add a post request to the form.ts
+  - I would then have to parse the req.body
+    - need to add the body parser middleware
+---
